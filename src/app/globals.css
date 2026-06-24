@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+
+/* Theme de Tailwind v4 - reemplaza tailwind.config.ts */
+@theme {
+  --color-brand: #1a6b4a;
+  --color-brand-light: #2d8f63;
+  --color-brand-dark: #0f4a32;
+
+  --color-accent: #e8a838;
+  --color-accent-soft: #fef3d8;
+
+  --color-cream: #faf7f2;
+  --color-parchment: #f0ebe1;
+
+  --color-ink: #1c1917;
+  --color-ink-soft: #57534e;
+  --color-ink-muted: #a8a29e;
+
+  --color-border: #e8e3dc;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+
+  --shadow-sm: 0 1px 3px rgba(26,107,74,.08), 0 1px 2px rgba(26,107,74,.04);
+  --shadow-md: 0 4px 16px rgba(26,107,74,.10), 0 2px 6px rgba(26,107,74,.06);
+  --shadow-lg: 0 12px 40px rgba(26,107,74,.14), 0 4px 12px rgba(26,107,74,.08);
+  --shadow-xl: 0 24px 64px rgba(26,107,74,.18);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-parchment); }
+::-webkit-scrollbar-thumb { background: var(--color-brand-light); border-radius: 99px; }
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-up  { animation: fadeUp  .55s ease both; }
+.animate-fade-in  { animation: fadeIn  .45s ease both; }
+.animate-scale-in { animation: scaleIn .5s  ease both; }
+
+.delay-100 { animation-delay: .10s; }
+.delay-200 { animation-delay: .20s; }
+.delay-300 { animation-delay: .30s; }
+.delay-400 { animation-delay: .40s; }
