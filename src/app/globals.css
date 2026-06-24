@@ -2,7 +2,6 @@
 @import "tailwindcss";
 
 /* Fuentes */
-
 /* Theme de Tailwind v4 - reemplaza tailwind.config.ts */
 @theme {
   --color-brand: #1a6b4a;

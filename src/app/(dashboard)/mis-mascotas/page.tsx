@@ -58,7 +58,7 @@ export default function PetsPage() {
   };
 
   return (
-    <main className="p-8 max-w-5xl mx-auto">
+    <main className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Mis Mascotas 🐾</h1>
 
       <form onSubmit={handleSubmit} className="grid gap-3 mb-10">
